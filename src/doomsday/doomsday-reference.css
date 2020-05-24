@@ -1,0 +1,21 @@
+button.link {
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    color: #ee935e;
+    text-decoration: underline;
+    font: inherit;
+  }
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.steps > div {
+    margin: 6px
+}

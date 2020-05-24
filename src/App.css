@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
+  height: 100vh;
+  background-color: #442c82;
+}
+
+.app-logo {
+  height: 60px;
+  width: 60px;
+  margin-right: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.main-content {
+  transition: 1s all;
+  display: flex;
+  overflow: auto;
+  width: calc(100% - 250px);
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-content.side-nav-collapsed {
+  width: calc(100% - 90px);
+} 
+
+.footer {
+  text-align: center;
+  margin-top: auto;
+  font-size: 12px;
+  padding-bottom: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.side-nav {
+  display: flex;
+  width: 400px;
+  overflow: auto;
+  z-index: 3;
+  transition: 1s;
+  background-color: rgb(54, 47, 112);
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.side-nav-content {
+  display: flex;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  align-items: center;
+  z-index: 3;
+  padding: 0 15px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.side-nav.collapsed {
+  width: 90px;
+}
+
+.side-nav-content::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.side-nav-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.side-nav-content::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #b04bfc;
+}
+
+.side-nav-expander {
+  width: 5px;
+  transition: 1s;
+  margin-left: auto;
+  border-right: 2px solid transparent;
+  cursor: pointer;
+}
+.side-nav-expander.show {
+  border-right-color: white;
+  /* background-color: black; */
+}
+
+.side-nav-header {
+  cursor: pointer;
+  text-align: center;
+  padding: 0 2px;
+}
+
+.side-nav-title {
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media (max-width: 500px) {
+  .side-nav {
+    width: 80%;
   }
-  to {
-    transform: rotate(360deg);
+  .main-content.side-nav-collapsed {
+    width: calc(100% - 60px);
   }
+  .main-content {
+    width: 20%;
+  }
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  padding: 4px 4px 0px 0px;
 }

@@ -1,0 +1,77 @@
+.doomsday {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    padding: 12px; */
+}
+
+.option > input[type="radio"] {
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+
+.button-group {
+    width: 150px;
+}
+
+.button-group > button {
+    float: right;
+    border: 1px solid white;
+    margin-left: 8px;
+    background-color: transparent;
+    padding: 8px;
+    color: white;
+    transition: 0.5s background-color;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.button-group > button:hover {
+    background-color: #ee935e;
+}
+.button-group > button:focus {
+    transform: translateY(2px);
+}
+
+.radio {
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin: 4px;
+    display: inline-block;
+    border: 2px solid white;
+    transition: 0.5s background-color;
+}
+
+input[type="radio"]:checked ~ .radio {
+    background-color: #ee935e;
+}
+
+input[type="radio"]:checked ~ label {
+    border-color: #ee935e;
+}
+
+.option-group > .option {
+    margin: 12px 0px;
+    position: relative;
+}
+
+.option > label {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: right;
+    padding-right: 12px;
+    border-radius: 4px;
+    border: 1px solid white;
+    position: absolute;
+}
