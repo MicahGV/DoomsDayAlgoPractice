@@ -1,3 +1,7 @@
+# DoomsDay Algorithm Practice
+
+<!-- TODO: Probably get rid of the boiler plate readme. -->
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
